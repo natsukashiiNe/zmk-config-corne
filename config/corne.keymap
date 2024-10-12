@@ -39,6 +39,15 @@
             flavor = "hold-preferred";
             retro-tap;
         };
+
+        l01_shift: l01_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "L01_SHIFT";
+            bindings = <&mo 1>, <&kp LEFT_SHIFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     keymap {
@@ -52,10 +61,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &kp W  &kp E     &kp R  &kp T              &kp Y                 &kp U  &kp I        &kp O    &kp P     &kp BSPC
-&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D     &kp F  &kp G              &kp H                 &kp J  &kp K        &kp L    &kp SEMI  &kp SQT
-&mo 4               &kp Z  &kp X  &kp C     &kp V  &kp B              &kp N                 &kp M  &kp COMMA    &kp DOT  &kp FSLH  &kp ESC
-                                  &kp LGUI  &mo 1  &mt LCTRL SPACE    &mt LEFT_SHIFT ENTER  &mo 2  &alt_layer3
+&kp TAB             &kp Q  &kp W  &kp E     &kp R       &kp T              &kp Y                 &kp U  &kp I        &kp O    &kp P     &kp BSPC
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D     &kp F       &kp G              &kp H                 &kp J  &kp K        &kp L    &kp SEMI  &kp SQT
+&mo 4               &kp Z  &kp X  &kp C     &kp V       &kp B              &kp N                 &kp M  &kp COMMA    &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LGUI  &l01_shift  &mt LCTRL SPACE    &mt LEFT_SHIFT ENTER  &mo 2  &alt_layer3
             >;
         };
 
@@ -104,6 +113,15 @@
 &trans  &trans        &out OUT_USB  &trans          &trans             &out OUT_TOG    &kp F5    &kp F6        &kp F7      &kp F8   &trans  &trans
 &trans  &trans        &trans        &trans          &trans             &out OUT_BLE    &kp F9    &kp F10       &kp F11     &kp F12  &trans  &trans
                                     &kp K_PREVIOUS  &kp K_VOLUME_DOWN  &trans          &kp K_PP  &kp K_VOL_UP  &kp K_NEXT
+            >;
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
