@@ -72,13 +72,6 @@
             label = "W_TMUX";
         };
 
-        s_tmux: s_tmux {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp S>;
-            label = "S_TMUX";
-        };
-
         d_tmux: s_tmux {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
