@@ -14,12 +14,12 @@
         compatible = "zmk,combos";
 
         l03_sup {
-            bindings = <&none>;
+            bindings = <&mo 3>;
             key-positions = <36 41>;
         };
 
         l05_sup {
-            bindings = <&none>;
+            bindings = <&mo 5>;
             key-positions = <37 40>;
         };
     };
