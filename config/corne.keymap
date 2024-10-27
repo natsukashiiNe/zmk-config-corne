@@ -89,6 +89,42 @@
             #binding-cells = <0>;
             mods = <(MOD_LGUI)>;
         };
+
+        alt_left_h: alt_left_h {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_LEFT_H";
+            bindings = <&kp LEFT>, <&kp LG(H)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        alt_down_j: alt_down_j {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_DOWN_J";
+            bindings = <&kp DOWN>, <&kp LG(J)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        alt_up_k: alt_up_k {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_UP_K";
+            bindings = <&kp UP_ARROW>, <&kp LG(K)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
+
+        alt_right_l: alt_right_l {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_RIGHT_L";
+            bindings = <&kp RIGHT>, <&kp LG(L)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+        };
     };
 
     macros {
@@ -171,10 +207,10 @@
 
         hyprtext {
             bindings = <
-&trans  &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)            &kp LG(Y)  &kp LG(U)       &kp LG(I)      &kp LG(O)    &kp LG(P)      &trans
-&trans  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LCTRL  &kp LC(BACKSPACE)    &kp LEFT   &kp DOWN        &kp UP         &kp RIGHT    &kp BACKSPACE  &kp DEL
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)            &kp LG(N)  &kp LG(M)       &kp LG(COMMA)  &kp LG(DOT)  &kp LG(FSLH)   &trans
-                              &trans     &trans     &trans               &trans     &kp LEFT_SHIFT  &kp BACKSPACE
+&trans  &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)            &kp LG(Y)       &kp LG(U)     &kp LG(I)      &kp LG(O)     &kp LG(P)      &trans
+&trans  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LCTRL  &kp LC(BACKSPACE)    &alt_left_h     &alt_down_j   &alt_up_k      &alt_right_l  &kp BACKSPACE  &kp DEL
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)            &kp LG(N)       &kp LG(M)     &kp LG(COMMA)  &kp LG(DOT)   &kp LG(FSLH)   &trans
+                              &trans     &trans     &trans               &kp LEFT_SHIFT  &kp LEFT_ALT  &kp BACKSPACE
             >;
         };
 
