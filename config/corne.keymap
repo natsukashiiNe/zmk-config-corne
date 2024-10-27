@@ -25,44 +25,6 @@
     };
 
     behaviors {
-        alt_layer3: alt_layer3 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_LAYER3";
-            bindings = <&kp LEFT_ALT>, <&mo 0>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        ent_l04: ent_l04 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "ENT_L04";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            retro-tap;
-        };
-
-        l01_shift: l01_shift {
-            compatible = "zmk,behavior-mod-morph";
-            label = "L01_SHIFT";
-            bindings = <&mo 1>, <&kp LEFT_SHIFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        lmove_sp: lmove_sp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LMOVE_SP";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         space_ctrl: space_ctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_CTRL";
@@ -73,56 +35,89 @@
             flavor = "hold-preferred";
             require-prior-idle-ms = <125>;
         };
+
+        lgui_h_left: lgui_h_left {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LGUI_H_LEFT";
+            bindings = <&kp H>, <&kp LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        lgui_j_down: lgui_j_down {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LGUI_J_DOWN";
+            bindings = <&kp H>, <&kp DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        lgui_k_up: lgui_k_up {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LGUI_K_UP";
+            bindings = <&kp H>, <&kp UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        lgui_l_right: lgui_l_right {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LGUI_L_RIGHT";
+            bindings = <&kp H>, <&kp RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        lgui_f_ctrl: lgui_f_ctrl {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LGUI_F_CTRL";
+            bindings = <&kp H>, <&kp LCTRL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
+
+        lgui_a_shift: lgui_a_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LGUI_A_SHIFT";
+            bindings = <&kp H>, <&kp LCTRL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI)>;
+        };
     };
 
     macros {
-        j_tmux: tmux_next {
+        p_tmux: f_tmux {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp J>;
-            label = "TMUX_NEXT";
-        };
-
-        k_tmux: tmux_prev {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp K>;
-            label = "TMUX_PREV";
-        };
-
-        r_tmux: r_tmux {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp R>;
-            label = "R_TMUX";
-        };
-
-        w_tmux: w_tmux {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp W>;
-            label = "W_TMUX";
-        };
-
-        d_tmux: s_tmux {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp D>;
-            label = "S_TMUX";
-        };
-
-        f_tmux: f_tmux {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp F>;
+            bindings = <&kp LC(P) &kp P>;
             label = "F_TMUX";
         };
 
-        g_tmux: g_tmux {
+        n_tmux: g_tmux {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp G>;
+            bindings = <&kp LC(P) &kp N>;
             label = "G_TMUX";
+        };
+
+        qt: qt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Q &kp T>;
+            label = "QT";
+        };
+
+        ex_qt: ex_qt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp AT_SIGN &kp T>;
+            label = "EX_QT";
         };
     };
 
@@ -137,10 +132,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &kp W  &kp E     &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BSPC
-&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D     &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&mo 4               &kp Z  &kp X  &kp C     &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESCAPE
-                                  &kp LGUI  &mo 1  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT ENTER  &mo 2  &kp LEFT_ALT
+&kp TAB             &kp Q  &kp W  &kp E  &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D  &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&mo 4               &kp Z  &kp X  &kp C  &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                                  &mo 3  &mo 1  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT ENTER  &mo 2  &kp LEFT_ALT
             >;
         };
 
@@ -152,10 +147,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans       &trans        &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp LEFT        &kp DOWN        &kp UP     &kp RIGHT  &trans  &trans
-&kp LS(RET)  &kp NUMBER_1  &kp N2  &kp N3    &kp N4      &kp N5         &kp N6          &kp N7          &kp N8     &kp N9     &kp N0  &kp BACKSLASH
-&trans       &trans        &trans  &kp HOME  &trans      &trans         &kp BACKSLASH   &kp UNDERSCORE  &kp END    &kp GRAVE  &trans  &trans
-                                   &kp LGUI  &trans      &trans         &kp LEFT_SHIFT  &mo 3           &kp LC(P)
+&ex_qt       &none         &p_tmux  &trans    &trans  &trans    &trans          &trans          &trans     &n_tmux    &trans  &trans
+&kp LS(RET)  &kp NUMBER_1  &kp N2   &kp N3    &kp N4  &kp N5    &kp N6          &kp N7          &kp N8     &kp N9     &kp N0  &kp BACKSLASH
+&trans       &trans        &trans   &kp HOME  &trans  &trans    &kp BACKSLASH   &kp UNDERSCORE  &kp END    &kp GRAVE  &trans  &trans
+                                    &kp LGUI  &trans  &trans    &kp LEFT_SHIFT  &mo 3           &kp LC(P)
             >;
         };
 
@@ -167,19 +162,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans     &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &kp TILDE          &kp PIPE               &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
-&trans  &kp TILDE  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
-&trans  &trans     &trans         &kp AT_SIGN     &kp CARET             &kp UNDERSCORE      &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
-                                  &trans          &trans                &trans              &kp RET            &trans                 &kp RALT
+&qt       &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &trans             &trans                 &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
+&kp PIPE  &kp CARET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
+&trans    &trans     &trans         &kp AT_SIGN     &trans                &kp UNDERSCORE      &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
+                                    &trans          &trans                &trans              &kp RET            &trans                 &kp RALT
             >;
         };
 
-        edtext {
+        hyprtext {
             bindings = <
-&trans  &trans          &trans  &trans  &trans     &trans               &trans    &trans    &trans  &trans     &trans         &trans
-&trans  &kp LEFT_SHIFT  &trans  &trans  &kp LCTRL  &kp LC(BACKSPACE)    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp BACKSPACE  &trans
-&trans  &trans          &trans  &trans  &trans     &trans               &trans    &trans    &trans  &trans     &trans         &trans
-                                &trans  &trans     &trans               &trans    &trans    &trans
+&trans  &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)            &kp LG(Y)  &kp LG(U)       &kp LG(I)      &kp LG(O)    &kp LG(P)      &trans
+&trans  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LCTRL  &kp LC(BACKSPACE)    &kp LEFT   &kp DOWN        &kp UP         &kp RIGHT    &kp BACKSPACE  &kp DEL
+&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)            &kp LG(N)  &kp LG(M)       &kp LG(COMMA)  &kp LG(DOT)  &kp LG(FSLH)   &trans
+                              &trans     &trans     &trans               &trans     &kp LEFT_SHIFT  &kp BACKSPACE
             >;
         };
 
