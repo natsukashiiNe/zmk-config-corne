@@ -216,10 +216,10 @@
 
         hyprtext {
             bindings = <
-&trans  &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)            &kp LG(Y)       &kp LG(U)     &kp LG(I)      &kp LG(O)     &kp LG(P)      &trans
-&trans  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LCTRL  &kp LC(BACKSPACE)    &alt_left_h     &alt_down_j   &alt_up_k      &alt_right_l  &kp BACKSPACE  &kp DEL
-&trans  &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)            &kp LG(N)       &kp LG(M)     &kp LG(COMMA)  &kp LG(DOT)   &kp LG(FSLH)   &trans
-                              &trans     &trans     &kp LG(SPACE)        &kp LEFT_SHIFT  &kp LEFT_ALT  &kp BACKSPACE
+&trans        &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)            &kp LG(Y)       &kp LG(U)     &kp LG(I)      &kp LG(O)     &kp LG(P)      &trans
+&kp LEFT_GUI  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LCTRL  &kp LC(BACKSPACE)    &alt_left_h     &alt_down_j   &alt_up_k      &alt_right_l  &kp BACKSPACE  &kp DEL
+&trans        &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)            &kp LG(N)       &kp LG(M)     &kp LG(COMMA)  &kp LG(DOT)   &kp LG(FSLH)   &trans
+                                    &trans     &trans     &kp LG(SPACE)        &kp LEFT_SHIFT  &kp LEFT_ALT  &kp BACKSPACE
             >;
         };
 
