@@ -19,7 +19,7 @@
         };
 
         l05_sup {
-            bindings = <&mo 3>;
+            bindings = <&mo 0>;
             key-positions = <37 40>;
         };
 
@@ -139,6 +139,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        lmove: lmove {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LMOVE";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -196,10 +205,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &kp W  &kp E                     &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D                     &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&mo 4               &kp Z  &kp X  &kp C                     &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                                  &gui_hyprtext 3 LEFT_GUI  &mo 1  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT ENTER  &mo 2  &kp LEFT_ALT
+&kp TAB             &kp Q  &kp W  &kp E         &kp R       &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F       &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&mo 4               &kp Z  &kp X  &kp C         &kp V       &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LEFT_GUI  &lmove 1 2  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT ENTER  &mo 3  &kp LEFT_ALT
             >;
         };
 
@@ -214,7 +223,16 @@
 &ex_qt       &none         &p_tmux  &harp_p   &trans  &trans    &trans          &trans          &harp_n    &n_tmux    &trans  &trans
 &kp LS(RET)  &kp NUMBER_1  &kp N2   &kp N3    &kp N4  &kp N5    &kp N6          &kp N7          &kp N8     &kp N9     &kp N0  &kp BACKSLASH
 &trans       &trans        &trans   &kp HOME  &trans  &trans    &kp BACKSLASH   &kp UNDERSCORE  &kp END    &kp GRAVE  &trans  &trans
-                                    &kp LGUI  &trans  &trans    &kp LEFT_SHIFT  &mo 3           &kp LC(P)
+                                    &kp LGUI  &trans  &trans    &kp LEFT_SHIFT  &tog 1          &kp LC(P)
+            >;
+        };
+
+        move_tog {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
+                        &trans  &trans  &trans    &trans    &to 0     &trans
             >;
         };
 
@@ -228,17 +246,8 @@
             bindings = <
 &qt       &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &trans             &trans                 &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
 &kp PIPE  &kp CARET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
-&trans    &trans     &trans         &kp AT_SIGN     &trans                &kp UNDERSCORE      &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
+&trans    &trans     &kp AT_SIGN    &kp HASH        &trans                &kp PERCENT         &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
                                     &trans          &trans                &trans              &kp RET            &trans                 &kp RALT
-            >;
-        };
-
-        hyprtext {
-            bindings = <
-&trans        &kp LG(Q)  &kp LG(W)  &kp LG(E)  &kp LG(R)  &kp LG(T)            &kp LG(Y)       &kp LG(U)     &kp LG(I)      &kp LG(O)     &kp LG(P)      &trans
-&kp LEFT_GUI  &kp LG(A)  &kp LG(S)  &kp LG(D)  &kp LCTRL  &kp LC(BACKSPACE)    &alt_left_h     &alt_down_j   &alt_up_k      &alt_right_l  &kp BACKSPACE  &kp DEL
-&trans        &kp LG(Z)  &kp LG(X)  &kp LG(C)  &kp LG(V)  &kp LG(B)            &kp LG(N)       &kp LG(M)     &kp LG(COMMA)  &kp LG(DOT)   &kp LG(FSLH)   &trans
-                                    &trans     &trans     &kp LG(SPACE)        &kp LEFT_SHIFT  &kp LEFT_ALT  &kp BACKSPACE
             >;
         };
 
