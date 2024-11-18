@@ -24,7 +24,7 @@
         };
 
         switch_tq {
-            bindings = <&tog 5>;
+            bindings = <&tog 4>;
             key-positions = <35 23 11>;
         };
     };
@@ -205,10 +205,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &kp W  &kp E         &kp R       &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F       &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&mo 4               &kp Z  &kp X  &kp C         &kp V       &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                                  &kp LEFT_GUI  &lmove 1 2  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT ENTER  &mo 3  &kp LEFT_ALT
+&kp TAB             &kp Q  &kp W  &kp E         &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&mo 3               &kp Z  &kp X  &kp C         &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LEFT_GUI  &mo 1  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT ENTER  &mo 2  &kp LEFT_ALT
             >;
         };
 
@@ -220,19 +220,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&ex_qt       &none         &p_tmux  &harp_p   &trans  &trans    &trans          &trans          &harp_n       &n_tmux    &trans  &trans
-&kp LS(RET)  &kp NUMBER_1  &kp N2   &kp N3    &kp N4  &kp N5    &kp N6          &kp N7          &kp N8        &kp N9     &kp N0  &kp BACKSLASH
-&trans       &trans        &trans   &kp DOWN  &trans  &trans    &kp BACKSLASH   &kp UNDERSCORE  &kp UP_ARROW  &kp GRAVE  &trans  &trans
-                                    &kp LGUI  &trans  &trans    &kp LEFT_SHIFT  &tog 1          &kp LC(P)
-            >;
-        };
-
-        move_tog {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans     &trans  &trans
-                        &trans  &trans  &trans    &trans    &to 0     &trans
+&ex_qt       &kp LEFT_SHIFT  &kp LEFT  &kp DOWN  &p_tmux  &harp_p    &harp_n         &n_tmux         &kp UP     &kp RIGHT  &trans     &trans
+&kp LS(RET)  &kp NUMBER_1    &kp N2    &kp N3    &kp N4   &kp N5     &kp N6          &kp N7          &kp N8     &kp N9     &kp N0     &kp BACKSLASH
+&trans       &trans          &trans    &trans    &trans   &trans     &kp BACKSLASH   &kp UNDERSCORE  &trans     &trans     &kp CARET  &trans
+                                       &kp LGUI  &trans   &trans     &kp LEFT_SHIFT  &trans          &kp LC(P)
             >;
         };
 
@@ -265,7 +256,7 @@
 &kp LEFT_SHIFT  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &tog 0
 &kp LEFT_ALT    &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL       &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                &kp MINUS  &mo 6   &kp SPACE    &trans  &trans  &trans
+                                &kp MINUS  &mo 5   &kp SPACE    &trans  &trans  &trans
             >;
         };
 
