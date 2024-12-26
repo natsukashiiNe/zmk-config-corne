@@ -24,7 +24,7 @@
         };
 
         switch_tq {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <35 23 11>;
         };
     };
@@ -148,6 +148,15 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        flayer: flayer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "FLAYER";
+            bindings = <&mo>, <&tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -191,6 +200,48 @@
             #binding-cells = <0>;
             bindings = <&kp LA(G) &kp E>;
             label = "HARP_P";
+        };
+
+        cf1: cf1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(F1)) &tog 4>;
+            label = "CF1";
+        };
+
+        cf2: cf2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(F2)) &tog 4>;
+            label = "CF2";
+        };
+
+        cf3: cf3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(F3)) &tog 4>;
+            label = "CF3";
+        };
+
+        cf4: cf4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(F4)) &tog 4>;
+            label = "CF4";
+        };
+
+        cf5: cf5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(F5)) &tog 4>;
+            label = "CF5";
+        };
+
+        cf6: cf6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(F6)) &tog 4>;
+            label = "CF6";
         };
     };
 
@@ -244,10 +295,19 @@
 
         sys {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3       &bt BT_SEL 4    &kp F1            &kp F2        &kp F3      &kp F4   &trans            &bt BT_CLR_ALL
-&trans  &trans        &out OUT_USB  &trans          &trans             &out OUT_TOG    &kp F5            &kp F6        &kp F7      &kp F8   &kp LS(LEFT_ALT)  &trans
-&trans  &trans        &trans        &trans          &trans             &out OUT_BLE    &kp F9            &kp F10       &kp F11     &kp F12  &trans            &kp CLCK
-                                    &kp K_PREVIOUS  &kp K_VOLUME_DOWN  &trans          &kp C_PLAY_PAUSE  &kp K_VOL_UP  &kp K_NEXT
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3       &bt BT_SEL 4    &kp F1            &kp F2        &kp F3      &kp F4   &trans            &trans
+&trans      &trans        &out OUT_USB  &trans          &trans             &out OUT_TOG    &kp F5            &kp F6        &kp F7      &kp F8   &kp LS(LEFT_ALT)  &trans
+&trans      &trans        &trans        &trans          &trans             &out OUT_BLE    &kp F9            &kp F10       &kp F11     &kp F12  &trans            &kp CLCK
+                                        &kp K_PREVIOUS  &kp K_VOLUME_DOWN  &trans          &kp C_PLAY_PAUSE  &kp K_VOL_UP  &kp K_NEXT
+            >;
+        };
+
+        flayer {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &cf1    &cf2    &cf3    &cf4    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &cf5    &cf6    &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -256,7 +316,7 @@
 &kp LEFT_SHIFT  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &tog 0
 &kp LEFT_ALT    &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL       &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                &kp MINUS  &mo 5   &kp SPACE    &trans  &trans  &trans
+                                &kp MINUS  &mo 6   &kp SPACE    &trans  &trans  &trans
             >;
         };
 
