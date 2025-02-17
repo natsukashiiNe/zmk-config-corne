@@ -24,12 +24,12 @@
         };
 
         go_flayer {
-            bindings = <&tog 4>;
+            bindings = <&tog 5>;
             key-positions = <24 35>;
         };
 
         tablet_def {
-            bindings = <&tog 5>;
+            bindings = <&tog 1>;
             key-positions = <35 23 11>;
         };
     };
@@ -210,42 +210,42 @@
         cf1: cf1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F1)) &tog 4>;
+            bindings = <&kp LA(LC(F1)) &tog 5>;
             label = "CF1";
         };
 
         cf2: cf2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F2)) &tog 4>;
+            bindings = <&kp LA(LC(F2)) &tog 5>;
             label = "CF2";
         };
 
         cf3: cf3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F3)) &tog 4>;
+            bindings = <&kp LA(LC(F3)) &tog 5>;
             label = "CF3";
         };
 
         cf4: cf4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F4)) &tog 4>;
+            bindings = <&kp LA(LC(F4)) &tog 5>;
             label = "CF4";
         };
 
         cf5: cf5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F5)) &tog 4>;
+            bindings = <&kp LA(LC(F5)) &tog 5>;
             label = "CF5";
         };
 
         cf6: cf6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F6)) &tog 4>;
+            bindings = <&kp LA(LC(F6)) &tog 5>;
             label = "CF6";
         };
     };
@@ -263,8 +263,17 @@
             bindings = <
 &kp TAB             &kp Q  &kp W  &kp E         &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
 &mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&mo 3               &kp Z  &kp X  &kp C         &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                                  &kp LEFT_GUI  &mo 1  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo 2  &kp LEFT_ALT
+&mo 4               &kp Z  &kp X  &kp C         &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LEFT_GUI  &mo 2  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo 3  &kp LEFT_ALT
+            >;
+        };
+
+        tab_def {
+            bindings = <
+&kp TAB             &kp Q  &kp W  &kp E         &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&mo 4               &kp Z  &kp X  &kp C         &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LEFT_ALT  &mo 2  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo 3  &kp LEFT_ALT
             >;
         };
 
@@ -313,15 +322,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &cf5    &cf6    &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        tab_def {
-            bindings = <
-&kp TAB             &kp Q  &kp W  &kp E         &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&mo 3               &kp Z  &kp X  &kp C         &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                                  &kp LEFT_ALT  &mo 1  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo 2  &kp LEFT_ALT
             >;
         };
     };
