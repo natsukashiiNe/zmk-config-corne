@@ -23,14 +23,14 @@
             key-positions = <37 40>;
         };
 
-        switch_tq {
-            bindings = <&tog 5>;
-            key-positions = <35 23 11>;
-        };
-
         go_flayer {
             bindings = <&tog 4>;
             key-positions = <24 35>;
+        };
+
+        tablet_def {
+            bindings = <&tog 5>;
+            key-positions = <35 23 11>;
         };
     };
 
@@ -316,21 +316,12 @@
             >;
         };
 
-        tq {
+        tab_def {
             bindings = <
-&kp LEFT_SHIFT  &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &tog 0
-&kp LEFT_ALT    &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL       &trans  &trans  &trans     &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                &kp MINUS  &mo 6   &kp SPACE    &trans  &trans  &trans
-            >;
-        };
-
-        tq2 {
-            bindings = <
-&kp ESC  &kp Y  &kp U  &kp I      &kp O    &kp P       &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &kp H  &kp J  &kp K      &kp L    &kp SEMI    &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &kp N  &kp M  &kp COMMA  &kp DOT  &kp FSLH    &trans  &trans  &trans  &trans  &trans  &trans
-                       &trans     &trans   &trans      &trans  &trans  &trans
+&kp TAB             &kp Q  &kp W  &kp E         &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
+&mo 3               &kp Z  &kp X  &kp C         &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LEFT_ALT  &mo 1  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo 2  &kp LEFT_ALT
             >;
         };
     };
