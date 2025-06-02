@@ -352,8 +352,8 @@
 
         tq_layer {
             bindings = <
+&kp TAB  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &kp ESC  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans   &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
                          &kp M   &trans  &kp LEFT_SHIFT    &trans  &trans  &trans
             >;
@@ -361,9 +361,9 @@
 
         tq_layer2 {
             bindings = <
-&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
-&kp L   &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &kp I   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Y   &kp U   &kp I   &kp O   &kp P     &trans  &trans  &trans  &trans  &trans  &trans
+&kp L   &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
