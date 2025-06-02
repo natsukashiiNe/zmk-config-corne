@@ -28,11 +28,6 @@
             key-positions = <24 35>;
         };
 
-        tablet_def {
-            bindings = <&tog 1>;
-            key-positions = <35 23 11>;
-        };
-
         tq {
             bindings = <&to 6>;
             key-positions = <11 23 35>;
