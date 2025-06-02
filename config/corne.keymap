@@ -32,6 +32,11 @@
             bindings = <&tog 1>;
             key-positions = <35 23 11>;
         };
+
+        tq {
+            bindings = <&to 6>;
+            key-positions = <11 23 35>;
+        };
     };
 
     behaviors {
@@ -341,6 +346,24 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &cf1    &cf2    &cf3    &cf4    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &cf5    &cf6    &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        tq_layer {
+            bindings = <
+&kp ESC  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans   &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+                         &kp M   &trans  &kp LEFT_SHIFT    &trans  &trans  &trans
+            >;
+        };
+
+        tq_layer2 {
+            bindings = <
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &kp I   &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
