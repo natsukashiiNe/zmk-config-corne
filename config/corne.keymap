@@ -24,12 +24,12 @@
         };
 
         go_flayer {
-            bindings = <&tog 5>;
+            bindings = <&tog 6>;
             key-positions = <24 35>;
         };
 
         tq {
-            bindings = <&to 6>;
+            bindings = <&to 7>;
             key-positions = <11 23 35>;
         };
     };
@@ -185,20 +185,6 @@
     };
 
     macros {
-        p_tmux: f_tmux {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp P>;
-            label = "F_TMUX";
-        };
-
-        n_tmux: g_tmux {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(P) &kp N>;
-            label = "G_TMUX";
-        };
-
         qt: qt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -230,43 +216,113 @@
         cf1: cf1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F1)) &tog 5>;
+            bindings = <&kp LA(LC(F1)) &tog 6>;
             label = "CF1";
         };
 
         cf2: cf2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F2)) &tog 5>;
+            bindings = <&kp LA(LC(F2)) &tog 6>;
             label = "CF2";
         };
 
         cf3: cf3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F3)) &tog 5>;
+            bindings = <&kp LA(LC(F3)) &tog 6>;
             label = "CF3";
         };
 
         cf4: cf4 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F4)) &tog 5>;
+            bindings = <&kp LA(LC(F4)) &tog 6>;
             label = "CF4";
         };
 
         cf5: cf5 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F5)) &tog 5>;
+            bindings = <&kp LA(LC(F5)) &tog 6>;
             label = "CF5";
         };
 
         cf6: cf6 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F6)) &tog 5>;
+            bindings = <&kp LA(LC(F6)) &tog 6>;
             label = "CF6";
+        };
+
+        tmux_w0: tmux_w0 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp N0>;
+            label = "TMUX_W0";
+        };
+
+        tmux_w2: tmux_w2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp NUMBER_2>;
+            label = "TMUX_W2";
+        };
+
+        tmux_w3: tmux_w3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp NUMBER_3>;
+            label = "TMUX_W3";
+        };
+
+        tmux_w4: tmux_w4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp NUMBER_4>;
+            label = "TMUX_W4";
+        };
+
+        tmux_w5: tmux_w5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp N5>;
+            label = "TMUX_W5";
+        };
+
+        tmux_w6: tmux_w6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp NUMBER_6>;
+            label = "TMUX_W6";
+        };
+
+        tmux_w7: tmux_w7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp N7>;
+            label = "TMUX_W7";
+        };
+
+        tmux_w8: tmux_w8 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp N8>;
+            label = "TMUX_W8";
+        };
+
+        tmux_w9: tmux_w9 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp N9>;
+            label = "TMUX_W9";
+        };
+
+        tmux_w1: tmux_w1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(N) &kp NUMBER_1>;
+            label = "TMUX_W1";
         };
     };
 
@@ -281,10 +337,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &kp W  &kp E         &kp R         &kp T                       &kp Y                 &kp U           &kp I                            &kp O    &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F         &kp G                       &kp H                 &kp J           &kp K                            &kp L    &kp SEMI  &mt LCTRL SQT
-&mo 4               &kp Z  &kp X  &kp C         &kp V         &kp B                       &kp N                 &kp M           &kp COMMA                        &kp DOT  &kp FSLH  &kp ESC
-                                  &kp LEFT_GUI  &mo_kp 2 TAB  &hp_balanced LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo_kp 3 ENTER  &hp_balanced LEFT_ALT BACKSPACE
+&kp TAB             &kp Q  &kp W  &kp E         &kp R         &kp T                       &kp Y                 &kp U               &kp I                            &kp O    &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F         &kp G                       &kp H                 &kp J               &kp K                            &kp L    &kp SEMI  &mt LCTRL SQT
+&mo 5               &kp Z  &kp X  &kp C         &kp V         &kp B                       &kp N                 &kp M               &kp COMMA                        &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LEFT_GUI  &mo_kp 2 TAB  &hp_balanced LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo_kp 3 BACKSPACE  &hp_balanced LEFT_ALT BACKSPACE
             >;
         };
 
@@ -292,7 +348,7 @@
             bindings = <
 &kp TAB             &kp Q  &kp W  &kp E         &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
 &mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&mo 4               &kp Z  &kp X  &kp C         &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+&mo 5               &kp Z  &kp X  &kp C         &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
                                   &kp LEFT_ALT  &mo 2  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo 3  &kp LEFT_ALT
             >;
         };
@@ -327,6 +383,15 @@
             >;
         };
 
+        macroses {
+            bindings = <
+&trans  &tmux_w9  &tmux_w7  &tmux_w6  &tmux_w5  &tmux_w4    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &tmux_w8  &tmux_w3  &tmux_w2  &tmux_w1  &tmux_w0    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans    &trans    &trans      &trans  &trans  &trans
+            >;
+        };
+
         sys {
             bindings = <
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3       &bt BT_SEL 4    &kp F1            &kp F2        &kp F3      &kp F4   &trans            &trans
@@ -350,7 +415,7 @@
 &kp TAB  &trans  &trans  &trans  &trans  &trans            &trans  &trans        &trans  &trans  &trans  &trans
 &kp ESC  &trans  &trans  &trans  &trans  &trans            &trans  &trans        &trans  &trans  &trans  &trans
 &trans   &trans  &trans  &trans  &trans  &trans            &trans  &trans        &trans  &trans  &trans  &to 0
-                         &kp M   &mo 7   &kp LEFT_SHIFT    &trans  &kp LEFT_WIN  &trans
+                         &kp M   &mo 8   &kp LEFT_SHIFT    &trans  &kp LEFT_WIN  &trans
             >;
         };
 
