@@ -75,6 +75,17 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        kp_B: kp_B {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_B";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            retro-tap;
+        };
     };
 
     macros {
@@ -230,10 +241,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &kp W  &kp E         &kp R          &kp T        &kp Y                 &kp U                &kp I         &kp O    &kp P     &mo_kpP 4 BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F          &kp G        &kp H                 &kp J                &kp K         &kp L    &kp SEMI  &mt LCTRL SQT
-&mo 5               &kp Z  &kp X  &kp C         &kp V          &kp B        &kp N                 &kp M                &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                                  &kp LEFT_GUI  &moP_kp 2 TAB  &kp SPACE    &mt LEFT_SHIFT SPACE  &moP_kp 3 BACKSPACE  &kp LEFT_ALT
+&mo_kpP 4 TAB       &kp Q  &kp W  &kp E         &kp R          &kp T        &kp Y           &kp U                &kp I         &kp O    &kp P     &mo_kpP 4 BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp_B LCTRL F  &kp G        &kp H           &kp_B RCTRL J        &kp K         &kp L    &kp SEMI  &mt LCTRL SQT
+&mo 5               &kp Z  &kp X  &kp C         &kp V          &kp B        &kp N           &kp M                &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LEFT_GUI  &moP_kp 2 TAB  &kp SPACE    &kp LEFT_SHIFT  &moP_kp 3 BACKSPACE  &kp LEFT_ALT
             >;
         };
 
@@ -278,10 +289,10 @@
 
         macroses {
             bindings = <
-&trans  &tmux_w9  &tmux_w7  &tmux_w6  &tmux_w5  &tmux_w4    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &tmux_w8  &tmux_w3  &tmux_w2  &tmux_w1  &tmux_w0    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans    &trans    &trans      &trans  &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
+&trans  &tmux_w1  &tmux_w2  &tmux_w3  &tmux_w4  &tmux_w5    &tmux_w6  &tmux_w7  &tmux_w8  &tmux_w9  &tmux_w0  &trans
+&trans  &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
+                            &trans    &trans    &trans      &trans    &trans    &trans
             >;
         };
 
