@@ -241,10 +241,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mo_kpP 4 TAB       &kp Q  &kp W  &kp E         &kp R          &kp T        &kp Y           &kp U                &kp I         &kp O    &kp P     &mo_kpP 4 BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp_B LCTRL F  &kp G        &kp H           &kp_B RCTRL J        &kp K         &kp L    &kp SEMI  &mt LCTRL SQT
-&mo 5               &kp Z  &kp X  &kp C         &kp V          &kp B        &kp N           &kp M                &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                                  &kp LEFT_GUI  &moP_kp 2 TAB  &kp SPACE    &kp LEFT_SHIFT  &moP_kp 3 BACKSPACE  &kp LEFT_ALT
+&mo_kpP 4 TAB       &kp Q  &kp W  &kp E         &kp R          &kp T               &kp Y             &kp U                &kp I         &kp O    &kp P     &mo_kpP 4 BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp_B LCTRL F  &kp_B LEFT_ALT G    &kp_B LEFT_ALT H  &kp_B RCTRL J        &kp K         &kp L    &kp SEMI  &mt LCTRL SQT
+&mo 5               &kp Z  &kp X  &kp C         &kp V          &kp B               &kp N             &kp M                &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LEFT_GUI  &moP_kp 2 TAB  &kp SPACE           &kp LEFT_SHIFT    &moP_kp 3 BACKSPACE  &kp LEFT_ALT
             >;
         };
 
