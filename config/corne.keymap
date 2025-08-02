@@ -46,126 +46,9 @@
             require-prior-idle-ms = <125>;
         };
 
-        lgui_h_left: lgui_h_left {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LGUI_H_LEFT";
-            bindings = <&kp H>, <&kp LEFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        lgui_j_down: lgui_j_down {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LGUI_J_DOWN";
-            bindings = <&kp H>, <&kp DOWN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        lgui_k_up: lgui_k_up {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LGUI_K_UP";
-            bindings = <&kp H>, <&kp UP>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        lgui_l_right: lgui_l_right {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LGUI_L_RIGHT";
-            bindings = <&kp H>, <&kp RIGHT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        lgui_f_ctrl: lgui_f_ctrl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LGUI_F_CTRL";
-            bindings = <&kp H>, <&kp LCTRL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        lgui_a_shift: lgui_a_shift {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LGUI_A_SHIFT";
-            bindings = <&kp H>, <&kp LCTRL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        alt_left_h: alt_left_h {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_LEFT_H";
-            bindings = <&kp LEFT>, <&kp LG(H)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        alt_down_j: alt_down_j {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_DOWN_J";
-            bindings = <&kp DOWN>, <&kp LG(J)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        alt_up_k: alt_up_k {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_UP_K";
-            bindings = <&kp UP_ARROW>, <&kp LG(K)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        alt_right_l: alt_right_l {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_RIGHT_L";
-            bindings = <&kp RIGHT>, <&kp LG(L)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        gui_hyprtext: gui_hyprtext {
+        moP_kp: moP_kp {
             compatible = "zmk,behavior-hold-tap";
-            label = "GUI_HYPRTEXT";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        lmove: lmove {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LMOVE";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        flayer: flayer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "FLAYER";
-            bindings = <&mo>, <&tog>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        mo_kp: mo_kp {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_KP";
+            label = "MOP_KP";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -183,9 +66,9 @@
             flavor = "balanced";
         };
 
-        kp_macro: kp_macro {
+        mo_kpP: mo_kpP {
             compatible = "zmk,behavior-hold-tap";
-            label = "KP_MACRO";
+            label = "MO_KPP";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
@@ -347,10 +230,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &kp W  &kp E         &kp R         &kp T                       &kp Y                 &kp U               &kp I                            &kp O    &kp P     &mo_kp 4 BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F         &kp G                       &kp H                 &kp J               &kp K                            &kp L    &kp SEMI  &mt LCTRL SQT
-&mo 5               &kp Z  &kp X  &kp C         &kp V         &kp B                       &kp N                 &kp M               &kp COMMA                        &kp DOT  &kp FSLH  &kp ESC
-                                  &kp LEFT_GUI  &mo_kp 2 TAB  &hp_balanced LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo_kp 3 BACKSPACE  &hp_balanced LEFT_ALT BACKSPACE
+&kp TAB             &kp Q  &kp W  &kp E         &kp R          &kp T        &kp Y                 &kp U                &kp I         &kp O    &kp P     &mo_kpP 4 BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S  &kp D         &kp F          &kp G        &kp H                 &kp J                &kp K         &kp L    &kp SEMI  &mt LCTRL SQT
+&mo 5               &kp Z  &kp X  &kp C         &kp V          &kp B        &kp N                 &kp M                &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
+                                  &kp LEFT_GUI  &moP_kp 2 TAB  &kp SPACE    &mt LEFT_SHIFT SPACE  &moP_kp 3 BACKSPACE  &kp LEFT_ALT
             >;
         };
 
