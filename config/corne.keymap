@@ -80,10 +80,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "KP_B";
             bindings = <&kp>, <&kp>;
-
+        
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <350>;
+            hold-trigger-on-release;   // Only trigger hold if released without other keys
+            quick-tap-ms = <0>;        // Forces immediate tap when used with other modifiers
             retro-tap;
         };
     };
