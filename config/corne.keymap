@@ -83,9 +83,10 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <350>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <250>;
+            require-prior-idle-ms = <100>;
+            hold-while-undecided;
         };
 
         mod_td: mod_td {
