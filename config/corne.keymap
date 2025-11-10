@@ -303,16 +303,16 @@
 &qt       &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &trans             &trans                 &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
 &kp PIPE  &kp CARET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
 &trans    &trans     &kp AT_SIGN    &kp HASH        &trans                &kp PERCENT         &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
-                                    &trans          &trans                &kp LEFT_SHIFT      &kp RET            &trans                 &kp RALT
+                                    &trans          &trans                &kp LCTRL           &kp RET            &trans                 &kp RALT
             >;
         };
 
         l021_sp-chars2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &kp LEFT_BRACE  &kp LBKT  &kp RBKT              &kp RIGHT_BRACE        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans    &trans                &trans                 &trans  &trans
-                        &trans  &trans  &trans    &trans          &trans    &trans
+&trans  &trans  &trans  &trans  &trans     &trans            &trans          &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
+&trans  &trans  &trans  &trans  &kp LCTRL  &trans            &kp LEFT_BRACE  &kp LBKT   &kp RBKT              &kp RIGHT_BRACE        &trans  &trans
+&trans  &trans  &trans  &trans  &trans     &trans            &trans          &kp MINUS  &trans                &trans                 &trans  &trans
+                        &trans  &trans     &kp LEFT_SHIFT    &trans          &trans     &trans
             >;
         };
 
