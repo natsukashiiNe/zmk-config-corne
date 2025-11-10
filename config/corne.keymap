@@ -85,8 +85,7 @@
             flavor = "balanced";
             tapping-term-ms = <250>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
-            hold-while-undecided;
+            require-prior-idle-ms = <0>;
         };
 
         mod_td: mod_td {
