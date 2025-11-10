@@ -98,7 +98,7 @@
         lt_B: lt_B {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_B";
-            bindings = <&kp>, <&mo>;
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <350>;
@@ -261,7 +261,7 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mo_kpP 5 TAB       &kp Q  &mt_B LCTRL W  &lt_B E 4     &kp R          &kp T               &kp Y           &kp U                &mt_B LCTRL I  &mt_B LEFT_ALT O  &kp P     &mo_kpP 5 BACKSPACE
+&mo_kpP 5 TAB       &kp Q  &mt_B LCTRL W  &lt_B 4 E     &kp R          &kp T               &kp Y           &kp U                &mt_B LCTRL I  &mt_B LEFT_ALT O  &kp P     &mo_kpP 5 BACKSPACE
 &mt LEFT_ALT ENTER  &kp A  &kp S          &kp D         &mt_B LCTRL F  &mt_B LEFT_ALT G    &kp H           &kp J                &kp K          &kp L             &kp SEMI  &mt LCTRL SQT
 &mo 6               &kp Z  &kp X          &kp C         &kp V          &kp B               &kp N           &kp M                &kp COMMA      &kp DOT           &kp FSLH  &kp ESC
                                           &kp LEFT_GUI  &moP_kp 2 TAB  &kp SPACE           &kp LEFT_SHIFT  &moP_kp 3 BACKSPACE  &kp LEFT_ALT
