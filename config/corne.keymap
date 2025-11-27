@@ -353,10 +353,10 @@
 
         tq_layer {
             bindings = <
-&kp ESCAPE      &kp T   &sl 9   &kp W   &kp SPACE  &kp R             &trans  &trans        &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp G   &kp A   &kp S   &kp D      &kp Q             &trans  &trans        &trans  &trans  &trans  &trans
+&kp ESCAPE      &trans  &sl 9   &trans  &trans     &trans            &trans  &trans        &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans     &trans            &trans  &trans        &trans  &trans  &trans  &trans
 &kp LEFT_ALT    &trans  &trans  &trans  &trans     &trans            &trans  &trans        &trans  &trans  &trans  &to 0
-                                &kp M   &kp E      &kp LEFT_SHIFT    &trans  &kp LEFT_WIN  &trans
+                                &kp M   &kp SPACE  &kp LEFT_SHIFT    &trans  &kp LEFT_WIN  &trans
             >;
         };
 
