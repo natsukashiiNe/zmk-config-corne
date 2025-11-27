@@ -353,19 +353,19 @@
 
         tq_layer {
             bindings = <
-&kp ESCAPE      &trans  &sl 9   &trans  &trans     &trans            &trans  &trans        &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans     &trans            &trans  &trans        &trans  &trans  &trans  &trans
-&kp LEFT_ALT    &trans  &trans  &trans  &trans     &trans            &trans  &trans        &trans  &trans  &trans  &to 0
-                                &kp M   &kp SPACE  &kp LEFT_SHIFT    &trans  &kp LEFT_WIN  &trans
+&kp ESCAPE      &kp Q  &sl 9  &kp E  &kp R      &kp T             &trans  &trans        &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp A  &kp S  &kp D  &kp F      &kp G             &trans  &trans        &trans  &trans  &trans  &trans
+&kp LEFT_ALT    &kp Z  &kp X  &kp C  &kp V      &kp B             &trans  &trans        &trans  &trans  &trans  &to 0
+                              &kp M  &kp SPACE  &kp LEFT_SHIFT    &trans  &kp LEFT_WIN  &trans
             >;
         };
 
         tq_layer2 {
             bindings = <
-&trans     &trans  &kp NUMBER_1  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans        &trans  &kp N2  &kp N3    &trans  &trans  &trans  &trans  &trans  &trans
-&kp ENTER  &trans  &trans        &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans  &trans  &trans    &trans  &trans  &trans
+&trans     &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
+&kp ENTER  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans     &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
