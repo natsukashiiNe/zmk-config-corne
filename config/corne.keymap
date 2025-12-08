@@ -256,6 +256,34 @@
             bindings = <&kp LC(N) &kp NUMBER_1>;
             label = "TMUX_W1";
         };
+
+        vi_center: vi_center {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp Z>;
+            label = "VI_CENTER";
+        };
+
+        vi_ftoggle: vi_ftoggle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp A>;
+            label = "VI_FTOGGLE";
+        };
+
+        vi_fac: vi_fac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp LS(M)>;
+            label = "VI_FAC";
+        };
+
+        vi_fao: vi_fao {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Z &kp LS(R)>;
+            label = "VI_FAO";
+        };
     };
 
     keymap {
@@ -269,8 +297,8 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mo_kpP 5 TAB       &kp Q  &mt_B LCTRL W  &lt_B 4 E     &kp R             &kp T               &kp Y           &kp U                &ht_ctrl LCTRL I  &mt_B LEFT_ALT O  &kp P     &mo_kpP 5 BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S          &kp D         &ht_ctrl LCTRL F  &mt_B LEFT_ALT G    &kp H           &kp J                &kp K             &kp L             &kp SEMI  &mt LCTRL SQT
+&mo_kpP 5 TAB       &kp Q  &mt_B LCTRL W  &lt_B 4 E     &kp R             &kp T               &lt_B 5 Y       &kp U                &ht_ctrl LCTRL I  &mt_B LEFT_ALT O  &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &kp S          &kp D         &ht_ctrl LCTRL F  &mt_B LEFT_ALT G    &kp H           &kp J                &kp K             &kp L             &kp SEMI  &kp SQT
 &mo 6               &kp Z  &kp X          &kp C         &kp V             &kp B               &kp N           &kp M                &kp COMMA         &kp DOT           &kp FSLH  &kp ESC
                                           &kp LEFT_GUI  &moP_kp 2 TAB     &kp SPACE           &kp LEFT_SHIFT  &moP_kp 3 BACKSPACE  &kp LEFT_ALT
             >;
@@ -326,10 +354,10 @@
 
         macroses {
             bindings = <
-&trans  &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
-&trans  &tmux_w1  &tmux_w2  &tmux_w3  &tmux_w4  &tmux_w5    &tmux_w6  &tmux_w7  &tmux_w8  &tmux_w9  &tmux_w0  &trans
-&trans  &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
-                            &trans    &trans    &trans      &trans    &trans    &trans
+&trans  &tmux_w6  &tmux_w7  &tmux_w8  &tmux_w9  &tmux_w0    &trans  &trans  &trans  &vi_ftoggle  &trans  &trans
+&trans  &tmux_w1  &tmux_w2  &tmux_w3  &tmux_w4  &tmux_w5    &trans  &trans  &trans  &vi_center   &trans  &trans
+&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans  &trans  &trans       &trans  &trans
+                            &trans    &trans    &trans      &trans  &trans  &trans
             >;
         };
 
