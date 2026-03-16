@@ -32,6 +32,14 @@
             bindings = <&to 8>;
             key-positions = <11 23 35>;
         };
+
+        wl-combo {
+            bindings = <&kp MINUS>;
+            key-positions = <1 21>;
+            timeout-ms = <100>;
+            layers = <0>;
+            slow-release;
+        };
     };
 
     behaviors {
@@ -345,10 +353,10 @@
 
         l021_sp-chars2 {
             bindings = <
-&trans  &trans  &kp LEFT_SHIFT  &trans  &trans     &trans    &trans          &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans  &trans
-&trans  &trans  &trans          &trans  &kp LCTRL  &trans    &kp LEFT_BRACE  &kp LBKT   &kp RBKT              &kp RIGHT_BRACE        &trans  &trans
-&trans  &trans  &trans          &trans  &trans     &trans    &trans          &kp MINUS  &trans                &trans                 &trans  &trans
-                                &trans  &trans     &trans    &trans          &trans     &trans
+&trans  &trans  &kp LEFT_SHIFT  &trans  &trans     &trans    &trans            &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &trans
+&trans  &trans  &trans          &trans  &kp LCTRL  &trans    &kp LEFT_BRACE    &kp LBKT   &kp RBKT              &kp RIGHT_BRACE        &trans         &trans
+&trans  &trans  &trans          &trans  &trans     &trans    &kp GREATER_THAN  &kp MINUS  &trans                &trans                 &trans         &trans
+                                &trans  &trans     &trans    &trans            &trans     &trans
             >;
         };
 
