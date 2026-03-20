@@ -353,7 +353,7 @@
 
         l021_sp-chars2 {
             bindings = <
-&trans  &trans  &kp LEFT_SHIFT  &trans  &trans     &trans    &trans            &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &trans
+&trans  &trans  &kp LEFT_SHIFT  &trans  &trans     &trans    &kp COLON         &kp PLUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &trans
 &trans  &trans  &trans          &trans  &kp LCTRL  &trans    &kp LEFT_BRACE    &kp LBKT   &kp RBKT              &kp RIGHT_BRACE        &trans         &trans
 &trans  &trans  &trans          &trans  &trans     &trans    &kp GREATER_THAN  &kp MINUS  &trans                &trans                 &trans         &trans
                                 &trans  &trans     &trans    &trans            &trans     &trans
