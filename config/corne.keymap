@@ -399,21 +399,21 @@
             >;
         };
 
-        tq_layer {
+        gd_main {
             bindings = <
-&kp ESCAPE      &kp Q  &sl 9  &kp E  &kp R      &kp T             &trans  &trans        &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp A  &kp S  &kp D  &kp F      &kp G             &trans  &trans        &trans  &trans  &trans  &trans
-&kp LEFT_ALT    &kp Z  &kp X  &kp C  &kp V      &kp B             &trans  &trans        &trans  &trans  &trans  &to 0
-                              &kp M  &kp SPACE  &kp LEFT_SHIFT    &trans  &kp LEFT_WIN  &trans
+&kp ESCAPE    &kp Q  &kp W  &kp E  &kp R  &kp T             &trans  &trans        &trans  &trans  &trans  &trans
+&kp LALT      &kp A  &kp S  &kp D  &kp F  &kp G             &trans  &trans        &trans  &trans  &trans  &trans
+&kp LEFT_ALT  &kp Z  &kp X  &kp C  &kp V  &kp B             &trans  &trans        &trans  &trans  &trans  &to 0
+                            &kp M  &mo 9  &kp LEFT_SHIFT    &trans  &kp LEFT_WIN  &trans
             >;
         };
 
-        tq_layer2 {
+        gd_sup {
             bindings = <
-&trans     &kp P     &kp O    &kp I      &kp U   &kp Y     &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp SEMI  &kp L    &kp K      &kp J   &kp H     &trans  &trans  &trans  &trans  &trans  &trans
-&kp ENTER  &kp FSLH  &kp DOT  &kp COMMA  &kp M   &kp N     &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans     &trans  &trans    &trans  &trans  &trans
+&trans     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ENTER  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &kp T   &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
