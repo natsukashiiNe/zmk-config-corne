@@ -43,7 +43,7 @@
 
         c_jo {
             bindings = <&kp ENTER>;
-            key-positions = <19 9>;
+            key-positions = <9 8>;
         };
 
         c_jk {
@@ -327,10 +327,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mo_kpP 5 TAB       &kp Q  &ht LCTRL W  &lt_B 4 E     &kp R          &kp T             &kp Y                 &kp U                &ht LCTRL I   &ht LEFT_ALT O  &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S        &kp D         &ht LCTRL F    &ht LEFT_ALT G    &kp H                 &kp J                &kp K         &kp L           &kp SEMI  &kp SQT
-&mo 6               &kp Z  &kp X        &kp C         &kp V          &kp B             &kp N                 &kp M                &kp COMMA     &kp DOT         &kp FSLH  &kp ESC
-                                        &kp LEFT_GUI  &moP_kp 2 TAB  &kp SPACE         &ht LEFT_SHIFT ENTER  &moP_kp 3 BACKSPACE  &kp LEFT_ALT
+&mo_kpP 5 TAB       &kp Q  &ht LCTRL W  &lt_B 4 E        &kp R          &kp T             &kp Y                 &kp U                &ht LCTRL I   &ht LEFT_ALT O  &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &lt_B 4 S    &ht LEFT_META D  &ht LCTRL F    &ht LEFT_ALT G    &kp H                 &kp J                &kp K         &kp L           &kp SEMI  &kp SQT
+&mo 6               &kp Z  &kp X        &kp C            &kp V          &kp B             &kp N                 &kp M                &kp COMMA     &kp DOT         &kp FSLH  &kp ESC
+                                        &kp LEFT_GUI     &moP_kp 2 TAB  &kp SPACE         &ht LEFT_SHIFT ENTER  &moP_kp 3 BACKSPACE  &kp LEFT_ALT
             >;
         };
 
