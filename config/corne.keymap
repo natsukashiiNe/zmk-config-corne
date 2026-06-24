@@ -34,8 +34,8 @@
         };
 
         semic {
-            bindings = <&kp MINUS>;
-            key-positions = <1 7 8 9>;
+            bindings = <&kp SEMICOLON>;
+            key-positions = <7 8 9>;
             timeout-ms = <100>;
             layers = <0>;
             slow-release;
@@ -43,7 +43,7 @@
 
         c_jo {
             bindings = <&kp ENTER>;
-            key-positions = <9 8 7>;
+            key-positions = <19 20 21>;
         };
 
         c_jk {
@@ -375,10 +375,10 @@
 
         l021_sp-chars2 {
             bindings = <
-&trans  &trans  &kp LEFT_SHIFT  &trans  &trans     &trans    &kp COLON         &kp HASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &trans
-&trans  &trans  &trans          &trans  &kp LCTRL  &trans    &kp LEFT_BRACE    &kp LBKT       &kp RBKT              &kp RIGHT_BRACE        &trans         &trans
-&trans  &trans  &trans          &trans  &trans     &trans    &kp GREATER_THAN  &kp AMPERSAND  &kp MINUS             &kp PLUS               &trans         &trans
-                                &trans  &trans     &trans    &trans            &trans         &trans
+&trans  &trans  &kp LEFT_SHIFT  &trans  &trans     &trans    &kp HASH          &kp COLON   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &trans
+&trans  &trans  &trans          &trans  &kp LCTRL  &trans    &kp LEFT_BRACE    &kp LBKT    &kp RBKT              &kp RIGHT_BRACE        &trans         &trans
+&trans  &trans  &trans          &trans  &trans     &trans    &kp GREATER_THAN  &kp DOLLAR  &kp MINUS             &kp PLUS               &trans         &trans
+                                &trans  &trans     &trans    &trans            &trans      &trans
             >;
         };
 
