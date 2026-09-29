@@ -13,62 +13,18 @@
     combos {
         compatible = "zmk,combos";
 
-        l03_sup {
-            bindings = <&mo 0>;
-            key-positions = <36 41>;
-        };
-
-        l05_sup {
-            bindings = <&mo 0>;
-            key-positions = <37 40>;
-        };
-
-        go_flayer {
-            bindings = <&tog 7>;
-            key-positions = <24 35>;
-        };
-
-        tq {
-            bindings = <&to 8>;
-            key-positions = <11 23 35>;
-        };
-
-        semic {
-            bindings = <&kp SEMICOLON>;
-            key-positions = <7 8 9>;
-            timeout-ms = <100>;
-            layers = <0>;
-            slow-release;
-        };
-
         c_jo {
             bindings = <&kp ENTER>;
-            key-positions = <19 20 21>;
+            key-positions = <21 20>;
         };
 
         c_jk {
             bindings = <&kp BACKSPACE>;
-            key-positions = <31 32 33>;
-        };
-
-        blietz {
-            bindings = <&to 10>;
-            key-positions = <10 22 34>;
+            key-positions = <19 20>;
         };
     };
 
     behaviors {
-        space_ctrl: space_ctrl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_CTRL";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-            require-prior-idle-ms = <125>;
-        };
-
         moP_kp: moP_kp {
             compatible = "zmk,behavior-hold-tap";
             label = "MOP_KP";
@@ -76,27 +32,6 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
-
-        hp_balanced: hp_balanced {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HP_BALANCED";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            quick-tap-ms = <175>;
-            tapping-term-ms = <300>;
-            flavor = "balanced";
-        };
-
-        mo_kpP: mo_kpP {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MO_KPP";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
         };
 
         mt_B: mt_B {
@@ -107,13 +42,6 @@
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <250>;
-        };
-
-        mod_td: mod_td {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MOD_TD";
-            #binding-cells = <0>;
-            bindings = <&mt_B LCTRL W>, <&kp W>;
         };
 
         lt_B: lt_B {
@@ -128,16 +56,6 @@
             flavor = "balanced";
         };
 
-        ht_ctrl: ht_ctrl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HT_CTRL";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <250>;
-        };
-
         ht: ht {
             compatible = "zmk,behavior-hold-tap";
             label = "HT";
@@ -146,16 +64,8 @@
             #binding-cells = <2>;
             tapping-term-ms = <350>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <135>;
             flavor = "balanced";
-        };
-
-        MO_modMO: MO_modMO {
-            compatible = "zmk,behavior-tap-dance";
-            label = "MO_MODMO";
-            #binding-cells = <0>;
-            tapping-term-ms = <350>;
-            bindings = <&kp LEFT_SHIFT>, <&lm>;
         };
     };
 
@@ -174,169 +84,15 @@
             label = "EX_QT";
         };
 
-        harp_n: harp_n {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(G) &kp I>;
-            label = "HARP_N";
-        };
-
-        harp_p: harp_p {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(G) &kp E>;
-            label = "HARP_P";
-        };
-
-        cf1: cf1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LC(F1)) &tog 7>;
-            label = "CF1";
-        };
-
-        cf2: cf2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LC(F2)) &tog 7>;
-            label = "CF2";
-        };
-
-        cf3: cf3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LC(F3)) &tog 7>;
-            label = "CF3";
-        };
-
-        cf4: cf4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LC(F4)) &tog 7>;
-            label = "CF4";
-        };
-
-        cf5: cf5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LC(F5)) &tog 7>;
-            label = "CF5";
-        };
-
-        cf6: cf6 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(LC(F6)) &tog 7>;
-            label = "CF6";
-        };
-
-        tmux_w0: tmux_w0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp N0>;
-            label = "TMUX_W0";
-        };
-
-        tmux_w2: tmux_w2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp NUMBER_2>;
-            label = "TMUX_W2";
-        };
-
-        tmux_w3: tmux_w3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp NUMBER_3>;
-            label = "TMUX_W3";
-        };
-
-        tmux_w4: tmux_w4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp NUMBER_4>;
-            label = "TMUX_W4";
-        };
-
-        tmux_w5: tmux_w5 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp N5>;
-            label = "TMUX_W5";
-        };
-
-        tmux_w6: tmux_w6 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp NUMBER_6>;
-            label = "TMUX_W6";
-        };
-
-        tmux_w7: tmux_w7 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp N7>;
-            label = "TMUX_W7";
-        };
-
-        tmux_w8: tmux_w8 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp N8>;
-            label = "TMUX_W8";
-        };
-
-        tmux_w9: tmux_w9 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp N9>;
-            label = "TMUX_W9";
-        };
-
-        tmux_w1: tmux_w1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(N) &kp NUMBER_1>;
-            label = "TMUX_W1";
-        };
-
-        vi_center: vi_center {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Z &kp Z>;
-            label = "VI_CENTER";
-        };
-
-        vi_ftoggle: vi_ftoggle {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Z &kp A>;
-            label = "VI_FTOGGLE";
-        };
-
-        vi_fac: vi_fac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Z &kp LS(M)>;
-            label = "VI_FAC";
-        };
-
-        vi_fao: vi_fao {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Z &kp LS(R)>;
-            label = "VI_FAO";
-        };
-
         lm: lm {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mo 11 &kp LEFT_SHIFT>,
+                <&mo 0 &kp LEFT_SHIFT>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 11 &kp LEFT_SHIFT>;
+                <&mo 0 &kp LEFT_SHIFT>;
 
             label = "LM";
         };
@@ -353,19 +109,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mo_kpP 5 TAB       &kp Q  &ht LCTRL W  &lt_B 4 E        &kp R          &kp T             &kp Y           &kp U                &ht LCTRL I   &ht LEFT_ALT O  &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &lt_B 4 S    &ht LEFT_META D  &ht LCTRL F    &ht LEFT_ALT G    &kp H           &kp J                &kp K         &kp L           &kp SEMI  &kp SQT
-&mo 6               &kp Z  &kp X        &kp C            &kp V          &kp B             &kp N           &kp M                &kp COMMA     &kp DOT         &kp FSLH  &kp ESC
-                                        &kp LEFT_GUI     &moP_kp 2 TAB  &kp SPACE         &kp LEFT_SHIFT  &moP_kp 3 BACKSPACE  &kp LEFT_ALT
-            >;
-        };
-
-        tab_def {
-            bindings = <
-&kp TAB             &kp Q  &mt_B LCTRL W  &kp E         &kp R  &kp T                      &kp Y                 &kp U  &kp I         &kp O    &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &kp S          &kp D         &kp F  &kp G                      &kp H                 &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&mo 6               &kp Z  &kp X          &kp C         &kp V  &kp B                      &kp N                 &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp ESC
-                                          &kp LEFT_ALT  &mo 2  &space_ctrl LCTRL SPACE    &mt LEFT_SHIFT SPACE  &mo 3  &kp LEFT_ALT
+&kp TAB             &kp Q  &ht LCTRL W  &lt_B 3 E        &kp R          &kp T             &ht LA(LCTRL) Y           &kp U            &ht LCTRL I   &ht LEFT_ALT O  &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &lt_B 3 S    &ht LEFT_META D  &ht LCTRL F    &ht LEFT_ALT G    &kp H                     &kp J            &kp K         &kp L           &kp SEMI  &kp SQT
+&mo 4               &kp Z  &kp X        &kp C            &kp V          &kp B             &ht LEFT_META N           &kp M            &kp COMMA     &kp DOT         &kp FSLH  &kp ESC
+                                        &kp LEFT_GUI     &moP_kp 1 TAB  &kp SPACE         &ht LEFT_SHIFT BACKSPACE  &moP_kp 2 ENTER  &kp LEFT_ALT
             >;
         };
 
@@ -377,10 +124,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&ex_qt       &kp LEFT_SHIFT  &kp LEFT  &kp DOWN  &trans  &harp_p    &harp_n         &trans          &kp UP     &kp RIGHT  &ex_qt     &trans
-&kp LS(RET)  &kp NUMBER_1    &kp N2    &kp N3    &kp N4  &kp N5     &kp N6          &kp N7          &kp N8     &kp N9     &kp N0     &kp BACKSLASH
-&trans       &trans          &trans    &trans    &trans  &trans     &kp BACKSLASH   &kp UNDERSCORE  &trans     &trans     &kp CARET  &trans
-                                       &kp LGUI  &trans  &trans     &kp LEFT_SHIFT  &kp SPACE       &kp LC(P)
+&ex_qt       &kp LEFT_SHIFT  &kp LEFT  &kp DOWN  &trans  &kp MINUS    &harp_n         &trans          &kp UP     &kp RIGHT  &ex_qt     &trans
+&kp LS(RET)  &kp NUMBER_1    &kp N2    &kp N3    &kp N4  &kp N5       &kp N6          &kp N7          &kp N8     &kp N9     &kp N0     &kp BACKSLASH
+&trans       &trans          &trans    &trans    &trans  &trans       &kp BACKSLASH   &kp UNDERSCORE  &trans     &trans     &kp CARET  &trans
+                                       &kp LGUI  &trans  &trans       &kp LEFT_SHIFT  &kp SPACE       &kp LC(P)
             >;
         };
 
@@ -392,28 +139,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&qt       &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &trans             &kp HASH               &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
-&kp PIPE  &kp CARET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
-&trans    &trans     &kp AT_SIGN    &kp HASH        &kp DOLLAR            &kp PERCENT         &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
-                                    &trans          &trans                &trans              &kp RET            &trans                 &kp RALT
+&qt        &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &kp COLON          &kp HASH               &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
+&kp CARET  &kp PIPE   &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
+&trans     &trans     &kp AT_SIGN    &kp HASH        &kp DOLLAR            &kp PERCENT         &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
+                                     &trans          &trans                &trans              &kp RET            &trans                 &kp RALT
             >;
         };
 
         l021_sp-chars2 {
             bindings = <
-&trans  &trans  &kp LEFT_SHIFT  &trans  &kp GRAVE  &kp TILDE    &kp HASH          &kp COLON   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LESS_THAN  &trans
-&trans  &trans  &trans          &trans  &kp LCTRL  &kp MINUS    &kp LEFT_BRACE    &kp LBKT    &kp RBKT              &kp RIGHT_BRACE        &kp TILDE      &trans
-&trans  &trans  &trans          &trans  &trans     &trans       &kp GREATER_THAN  &kp DOLLAR  &kp MINUS             &kp PLUS               &trans         &trans
-                                &trans  &trans     &trans       &trans            &trans      &trans
-            >;
-        };
-
-        macroses {
-            bindings = <
-&trans  &tmux_w6  &tmux_w7  &tmux_w8  &tmux_w9  &tmux_w0    &trans  &trans  &trans  &vi_ftoggle  &trans  &trans
-&trans  &tmux_w1  &tmux_w2  &tmux_w3  &tmux_w4  &tmux_w5    &trans  &trans  &trans  &vi_center   &trans  &trans
-&trans  &trans    &trans    &trans    &trans    &trans      &trans  &trans  &trans  &trans       &trans  &trans
-                            &trans    &trans    &trans      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -423,51 +161,6 @@
 &trans      &trans        &out OUT_USB  &trans          &trans             &out OUT_TOG    &kp F5            &kp F6        &kp F7      &kp F8   &kp LS(LEFT_ALT)  &trans
 &trans      &trans        &trans        &trans          &trans             &out OUT_BLE    &kp F9            &kp F10       &kp F11     &kp F12  &trans            &kp CLCK
                                         &kp K_PREVIOUS  &kp K_VOLUME_DOWN  &trans          &kp C_PLAY_PAUSE  &kp K_VOL_UP  &kp K_NEXT
-            >;
-        };
-
-        flayer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &cf1    &cf2    &cf3    &cf4    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &cf5    &cf6    &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        gd_main {
-            bindings = <
-&kp ESCAPE    &kp Q  &kp W  &kp E  &kp R  &kp T             &trans  &trans        &trans  &trans  &trans  &trans
-&kp LALT      &kp A  &kp S  &kp D  &kp F  &kp G             &trans  &trans        &trans  &trans  &trans  &trans
-&kp LEFT_ALT  &kp Z  &kp X  &kp C  &kp V  &kp B             &trans  &trans        &trans  &trans  &trans  &to 0
-                            &kp M  &mo 9  &kp LEFT_SHIFT    &trans  &kp LEFT_WIN  &trans
-            >;
-        };
-
-        gd_sup {
-            bindings = <
-&trans     &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
-&kp ENTER  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &kp T   &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        blietz {
-            bindings = <
-&kp ESCAPE  &kp Q  &kp W  &kp E  &kp R         &kp T        &trans  &trans        &trans  &trans  &trans  &trans
-&kp LALT    &kp A  &kp S  &kp D  &kp F         &kp G        &trans  &trans        &trans  &trans  &trans  &trans
-&kp ENTER   &kp Z  &kp X  &kp C  &kp V         &kp B        &trans  &trans        &trans  &trans  &trans  &to 0
-                          &kp M  &lt 11 SPACE  &MO_modMO    &trans  &kp LEFT_WIN  &trans
-            >;
-        };
-
-        blietz2 {
-            bindings = <
-&trans     &kp N6  &kp N7  &kp N8  &kp N9  &kp N0    &trans  &trans  &trans  &trans  &trans  &trans
-&trans     &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
-&kp ENTER  &trans  &trans  &trans  &trans  &trans    &kp T   &trans  &trans  &trans  &trans  &trans
-                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
