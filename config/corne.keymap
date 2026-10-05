@@ -25,26 +25,16 @@
     };
 
     behaviors {
-        moP_kp: moP_kp {
+        lt_h: lt_h {
             compatible = "zmk,behavior-hold-tap";
-            label = "MOP_KP";
+            label = "LT_H";
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
 
-        mt_B: mt_B {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_B";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <250>;
-        };
-
-        lt_B: lt_B {
+        lt_b: lt_b {
             compatible = "zmk,behavior-hold-tap";
             label = "LT_B";
             bindings = <&mo>, <&kp>;
@@ -56,15 +46,63 @@
             flavor = "balanced";
         };
 
-        ht: ht {
+        ht_b: ht_b {
             compatible = "zmk,behavior-hold-tap";
-            label = "HT";
+            label = "HT_B";
             bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <0>;
+            flavor = "balanced";
+        };
+
+        ht_t: ht_t {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_T";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+        };
+
+        ht_h: ht_h {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_H";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <0>;
+            flavor = "hold-preferred";
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "NEW_BEHAVIOR";
+            bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <350>;
             quick-tap-ms = <200>;
-            require-prior-idle-ms = <135>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+        };
+
+        ll: ll {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LL";
+            bindings = <&mo>, <&to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <(-1)>;
+            require-prior-idle-ms = <(-1)>;
             flavor = "balanced";
         };
     };
@@ -109,10 +147,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &ht LCTRL W  &lt_B 3 E        &kp R          &kp T              &kp Y                     &kp U            &ht LCTRL I   &ht LEFT_ALT O  &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &lt_B 3 S    &ht LEFT_META D  &ht LCTRL F    &ht LA(LCTRL) G    &kp H                     &kp J            &kp K         &kp L           &kp SEMI  &kp SQT
-&mo 4               &kp Z  &kp X        &kp C            &kp V          &kp B              &ht LEFT_META N           &kp M            &kp COMMA     &kp DOT         &kp FSLH  &kp ESC
-                                        &kp LEFT_GUI     &moP_kp 1 TAB  &kp SPACE          &ht LEFT_SHIFT BACKSPACE  &moP_kp 2 ENTER  &kp LEFT_ALT
+&kp TAB             &kp Q  &ht_b LCTRL W  &lt_b 3 E          &kp R          &kp T                    &kp Y                       &kp U          &ht_b LCTRL I  &ht_b LEFT_ALT O  &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &lt_b 3 S      &ht_t LEFT_META D  &ht_b LCTRL F  &ht_b LA(LCTRL) G        &kp H                       &kp J          &kp K          &kp L             &kp SEMI  &kp SQT
+&mo 4               &kp Z  &kp X          &kp C              &kp V          &kp B                    &ht_t LEFT_META N           &kp M          &kp COMMA      &kp DOT           &kp FSLH  &kp ESC
+                                          &kp LEFT_GUI       &ll 1 1        &ht_h LA(LCTRL) SPACE    &ht_h LEFT_SHIFT BACKSPACE  &lt_h 2 ENTER  &kp LEFT_ALT
             >;
         };
 
@@ -127,7 +165,7 @@
 &ex_qt       &kp LEFT_SHIFT  &kp LEFT  &kp DOWN  &trans  &kp MINUS    &trans          &trans          &kp UP     &kp RIGHT  &ex_qt     &trans
 &kp LS(RET)  &kp NUMBER_1    &kp N2    &kp N3    &kp N4  &kp N5       &kp N6          &kp N7          &kp N8     &kp N9     &kp N0     &kp BACKSLASH
 &trans       &trans          &trans    &trans    &trans  &trans       &kp BACKSLASH   &kp UNDERSCORE  &trans     &trans     &kp CARET  &trans
-                                       &kp LGUI  &trans  &trans       &kp LEFT_SHIFT  &kp SPACE       &kp LC(P)
+                                       &kp LGUI  &to 0   &trans       &kp LEFT_SHIFT  &kp SPACE       &kp LC(P)
             >;
         };
 
