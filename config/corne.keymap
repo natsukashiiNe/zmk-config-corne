@@ -94,16 +94,18 @@
             flavor = "balanced";
         };
 
-        ll: ll {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LL";
-            bindings = <&mo>, <&to>;
+        l1: l1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L1";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&to 1>;
+        };
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <(-1)>;
-            require-prior-idle-ms = <(-1)>;
-            flavor = "balanced";
+        S_CM: S_CM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "S_CM";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp LA(LCTRL)>;
         };
     };
 
@@ -147,10 +149,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB             &kp Q  &ht_b LCTRL W  &lt_b 3 E          &kp R          &kp T                    &kp Y                       &kp U          &ht_b LCTRL I  &ht_b LEFT_ALT O  &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &lt_b 3 S      &ht_t LEFT_META D  &ht_b LCTRL F  &ht_b LA(LCTRL) G        &kp H                       &kp J          &kp K          &kp L             &kp SEMI  &kp SQT
-&mo 4               &kp Z  &kp X          &kp C              &kp V          &kp B                    &ht_t LEFT_META N           &kp M          &kp COMMA      &kp DOT           &kp FSLH  &kp ESC
-                                          &kp LEFT_GUI       &ll 1 1        &ht_h LA(LCTRL) SPACE    &ht_h LEFT_SHIFT BACKSPACE  &lt_h 2 ENTER  &kp LEFT_ALT
+&kp TAB             &kp Q  &ht_b LCTRL W  &lt_b 3 E          &kp R          &kp T               &kp Y              &kp U          &ht_b LCTRL I  &ht_b LEFT_ALT O  &kp P     &kp BACKSPACE
+&mt LEFT_ALT ENTER  &kp A  &lt_b 3 S      &ht_t LEFT_META D  &ht_b LCTRL F  &ht_b LEFT_ALT G    &kp H              &kp J          &kp K          &kp L             &kp SEMI  &kp SQT
+&mo 4               &kp Z  &kp X          &kp C              &kp V          &kp B               &ht_t LEFT_META N  &kp M          &kp COMMA      &kp DOT           &kp FSLH  &kp ESC
+                                          &kp LEFT_GUI       &l1            &kp SPACE           &S_CM              &lt_h 2 ENTER  &kp LEFT_ALT
             >;
         };
 
@@ -177,7 +179,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&qt       &kp GRAVE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &kp COLON          &kp HASH               &kp AMPERSAND    &kp PLUS          &kp TILDE   &trans
+&qt       &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &kp COLON          &kp HASH               &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
 &kp PIPE  &kp CARET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
 &trans    &trans     &kp AT_SIGN    &kp HASH        &kp DOLLAR            &kp PERCENT         &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
                                     &trans          &trans                &trans              &kp RET            &trans                 &kp RALT
@@ -186,19 +188,19 @@
 
         l021_sp-chars2 {
             bindings = <
-&trans    &kp GRAVE  &kp LC(LEFT_ALT)  &trans  &trans     &trans          &kp COLON         &kp HASH              &kp TILDE              &kp MINUS          &kp LESS_THAN  &trans
-&kp PIPE  &kp LCTRL  &trans            &trans  &kp LCTRL  &kp LEFT_ALT    &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &kp DOLLAR     &kp NON_US_BACKSLASH
-&trans    &trans     &trans            &trans  &trans     &kp PERCENT     &kp GREATER_THAN  &kp AT_SIGN           &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp COMMA      &trans
-                                       &trans  &trans     &trans          &trans            &trans                &trans
+&trans  &kp GRAVE  &kp LC(LEFT_ALT)  &trans  &trans             &trans                  &kp COLON         &kp HASH              &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp LESS_THAN  &trans
+&trans  &trans     &trans            &trans  &ht_b LCTRL TILDE  &ht_b LEFT_ALT MINUS    &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &kp DOLLAR     &kp NON_US_BACKSLASH
+&trans  &trans     &trans            &trans  &trans             &kp PERCENT             &kp GREATER_THAN  &kp AT_SIGN           &kp COMMA              &kp PERIOD         &kp GRAVE      &trans
+                                     &trans  &trans             &trans                  &trans            &trans                &trans
             >;
         };
 
         sys {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3       &bt BT_SEL 4    &kp F1            &kp F2        &kp F3      &kp F4   &trans            &trans
-&trans      &trans        &out OUT_USB  &trans          &trans             &out OUT_TOG    &kp F5            &kp F6        &kp F7      &kp F8   &kp LS(LEFT_ALT)  &trans
-&trans      &trans        &trans        &trans          &trans             &out OUT_BLE    &kp F9            &kp F10       &kp F11     &kp F12  &trans            &kp CLCK
-                                        &kp K_PREVIOUS  &kp K_VOLUME_DOWN  &trans          &kp C_PLAY_PAUSE  &kp K_VOL_UP  &kp K_NEXT
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp F1  &kp F2   &kp F3   &kp F4   &trans            &trans
+&trans      &trans        &out OUT_USB  &trans        &trans        &out OUT_TOG    &kp F5  &kp F6   &kp F7   &kp F8   &kp LS(LEFT_ALT)  &trans
+&trans      &trans        &trans        &trans        &trans        &out OUT_BLE    &kp F9  &kp F10  &kp F11  &kp F12  &trans            &kp CLCK
+                                        &trans        &trans        &trans          &trans  &trans   &trans
             >;
         };
     };
