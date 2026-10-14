@@ -118,7 +118,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <350>;
             quick-tap-ms = <200>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <0>;
             hold-while-undecided;
         };
@@ -128,9 +128,8 @@
             label = "SK_S";
             bindings = <&kp>;
             #binding-cells = <1>;
-            release-after-ms = <(-1)>;
+            release-after-ms = <2500>;
             quick-release;
-            lazy;
         };
     };
 
