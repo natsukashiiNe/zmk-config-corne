@@ -16,11 +16,20 @@
         c_jo {
             bindings = <&kp ENTER>;
             key-positions = <21 20>;
+            require-prior-idle-ms = <125>;
         };
 
         c_jk {
             bindings = <&kp BACKSPACE>;
             key-positions = <19 20>;
+            require-prior-idle-ms = <125>;
+        };
+
+        c_wn {
+            bindings = <&arr_l>;
+            key-positions = <1 30>;
+            require-prior-idle-ms = <125>;
+            layers = <0>;
         };
     };
 
@@ -140,6 +149,13 @@
                 <&mo 0 &kp LEFT_SHIFT>;
 
             label = "LM";
+        };
+
+        arr_l: arr_l {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
+            label = "ARR_L";
         };
     };
 
