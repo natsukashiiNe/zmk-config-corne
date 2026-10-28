@@ -222,28 +222,28 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&qt        &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &kp COLON          &kp HASH               &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
-&kp CARET  &kp PIPE   &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
-&trans     &trans     &kp AT_SIGN    &kp HASH        &kp DOLLAR            &kp PERCENT         &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
-                                     &trans          &trans                &trans              &trans             &trans                 &kp RALT
+&qt       &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &kp COLON          &kp HASH               &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
+&kp PIPE  &kp LCTRL  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
+&trans    &trans     &kp AT_SIGN    &kp HASH        &kp DOLLAR            &kp PERCENT         &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
+                                    &trans          &trans                &trans              &trans             &trans                 &kp RALT
             >;
         };
 
         l021_sp-chars2 {
             bindings = <
-&trans  &trans  &kp LC(LEFT_ALT)  &trans  &trans             &trans                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp GRAVE              &kp SQT          &kp LESS_THAN  &trans
+&trans  &trans  &kp LC(LEFT_ALT)  &trans  &trans             &trans                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SINGLE_QUOTE       &kp HASH         &kp LESS_THAN  &trans
 &trans  &trans  &trans            &trans  &ht_b LCTRL TILDE  &ht_b LEFT_ALT MINUS    &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp COLON      &kp NON_US_BACKSLASH
-&trans  &trans  &trans            &trans  &kp DOLLAR         &kp PERCENT             &kp GREATER_THAN  &kp AT_SIGN           &kp HASH               &kp PERIOD       &kp COMMA      &trans
+&trans  &trans  &trans            &trans  &kp DOLLAR         &kp PERCENT             &kp GREATER_THAN  &kp AT_SIGN           &kp COMMA              &kp DOT          &kp GRAVE      &trans
                                   &trans  &trans             &trans                  &trans            &trans                &trans
             >;
         };
 
         lhs_special {
             bindings = <
-&trans  &trans  &kp MINUS  &kp ASTERISK  &trans            &kp EQUAL        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &kp GREATER_THAN  &trans           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans        &trans            &kp LESS_THAN    &trans  &trans  &trans  &trans  &trans  &trans
-                           &trans        &trans            &trans           &trans  &trans  &trans
+&trans  &kp QUESTION  &kp MINUS  &kp ASTERISK  &trans            &kp EQUAL        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans     &kp COLON     &kp GREATER_THAN  &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans     &trans        &trans            &kp LESS_THAN    &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans        &trans            &trans           &trans  &trans  &trans
             >;
         };
 
