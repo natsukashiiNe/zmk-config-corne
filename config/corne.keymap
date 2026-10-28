@@ -231,17 +231,17 @@
 
         l021_sp-chars2 {
             bindings = <
-&trans  &trans  &kp LC(LEFT_ALT)  &trans  &trans             &trans                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp SINGLE_QUOTE       &kp HASH         &kp LESS_THAN  &trans
-&trans  &trans  &trans            &trans  &ht_b LCTRL TILDE  &ht_b LEFT_ALT MINUS    &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp COLON      &kp NON_US_BACKSLASH
-&trans  &trans  &trans            &trans  &kp DOLLAR         &kp PERCENT             &kp GREATER_THAN  &kp AT_SIGN           &kp COMMA              &kp DOT          &kp GRAVE      &trans
-                                  &trans  &trans             &trans                  &trans            &trans                &trans
+&trans  &trans  &kp LC(HASH)  &trans  &trans             &kp COLON               &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp GRAVE              &kp SINGLE_QUOTE  &kp LESS_THAN  &trans
+&trans  &trans  &trans        &trans  &ht_b LCTRL TILDE  &ht_b LEFT_ALT MINUS    &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE   &kp COLON      &kp NON_US_BACKSLASH
+&trans  &trans  &trans        &trans  &kp DOLLAR         &kp PERCENT             &kp GREATER_THAN  &kp AT_SIGN           &kp COMMA              &kp DOT           &kp QUESTION   &trans
+                              &trans  &trans             &trans                  &trans            &trans                &trans
             >;
         };
 
         lhs_special {
             bindings = <
 &trans  &kp QUESTION  &kp MINUS  &kp ASTERISK  &trans            &kp EQUAL        &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans     &kp COLON     &kp GREATER_THAN  &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans     &kp COLON     &kp GREATER_THAN  &kp QUESTION     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans     &trans        &trans            &kp LESS_THAN    &trans  &trans  &trans  &trans  &trans  &trans
                                  &trans        &trans            &trans           &trans  &trans  &trans
             >;
