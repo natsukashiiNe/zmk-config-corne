@@ -116,7 +116,7 @@
             bindings = <&kp>, <&sticky_SHIFT>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <350>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <200>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <0>;
@@ -132,14 +132,17 @@
             quick-release;
         };
 
-	smart_sticky_shift: smart_sticky_shift {
-	    compatible = "zmk,behavior-mod-morph";
-	    label = "SMART_STICKY_SHIFT";
-	    bindings = <&CM_Shift LA(LCTRL) LEFT_SHIFT>, <&sticky_SHIFT LEFT_SHIFT>;
-	    #binding-cells = <0>;
-	    mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
-	    keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
-	};
+        smart_sticky_shift: smart_sticky_shift {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SMART_STICKY_SHIFT";
+            bindings =
+                <&CM_Shift LA(LCTRL) LEFT_SHIFT>,
+                <&sticky_SHIFT LEFT_SHIFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     macros {
@@ -190,8 +193,8 @@
 
             bindings = <
 &kp TAB             &kp Q  &ht_b LCTRL W  &lt_b 3 E          &kp R          &kp T               &kp Y                &kp U          &ht_b LCTRL I  &ht_b LEFT_ALT O  &kp P     &kp BACKSPACE
-&mt LEFT_ALT ENTER  &kp A  &lt_b 3 S      &ht_t LEFT_META D  &ht_b LCTRL F  &ht_b LEFT_ALT G    &kp H                &kp J          &kp K          &kp L             &kp SEMI  &kp SQT
-&mo 4               &kp Z  &kp X          &kp C              &kp V          &kp B               &ht_t LEFT_META N    &kp M          &kp COMMA      &kp DOT           &kp FSLH  &kp ESC
+&mt LEFT_ALT ENTER  &kp A  &kp S          &ht_t LEFT_META D  &ht_b LCTRL F  &ht_b LEFT_ALT G    &kp H                &kp J          &kp K          &kp L             &kp SEMI  &kp SQT
+&mo 5               &kp Z  &kp X          &kp C              &kp V          &kp B               &ht_t LEFT_META N    &kp M          &kp COMMA      &kp DOT           &kp FSLH  &kp ESC
                                           &kp LEFT_GUI       &l1            &kp SPACE           &smart_sticky_shift  &lt_h 2 ENTER  &kp LEFT_ALT
             >;
         };
@@ -219,19 +222,28 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&qt       &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &kp COLON          &kp HASH               &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
-&kp PIPE  &kp CARET  &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
-&trans    &trans     &kp AT_SIGN    &kp HASH        &kp DOLLAR            &kp PERCENT         &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
-                                    &trans          &trans                &trans              &kp RET            &trans                 &kp RALT
+&qt        &kp TILDE  &kp MINUS      &kp ASTERISK    &kp EXCL              &kp EQUAL           &kp COLON          &kp HASH               &kp AMPERSAND    &kp PLUS          &kp GRAVE   &trans
+&kp CARET  &kp PIPE   &kp LESS_THAN  &kp LEFT_BRACE  &kp LEFT_PARENTHESIS  &kp LEFT_BRACKET    &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp GREATER_THAN  &kp DOLLAR  &kp BACKSLASH
+&trans     &trans     &kp AT_SIGN    &kp HASH        &kp DOLLAR            &kp PERCENT         &trans             &trans                 &trans           &trans            &trans      &kp ESCAPE
+                                     &trans          &trans                &trans              &trans             &trans                 &kp RALT
             >;
         };
 
         l021_sp-chars2 {
             bindings = <
-&trans  &kp GRAVE  &kp LC(LEFT_ALT)  &trans  &trans             &trans                  &kp COLON         &kp HASH              &kp LEFT_BRACKET       &kp RIGHT_BRACKET  &kp LESS_THAN  &trans
-&trans  &trans     &trans            &trans  &ht_b LCTRL TILDE  &ht_b LEFT_ALT MINUS    &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE    &kp DOLLAR     &kp NON_US_BACKSLASH
-&trans  &trans     &trans            &trans  &trans             &kp PERCENT             &kp GREATER_THAN  &kp AT_SIGN           &kp COMMA              &kp PERIOD         &kp GRAVE      &trans
-                                     &trans  &trans             &trans                  &trans            &trans                &trans
+&trans  &trans  &kp LC(LEFT_ALT)  &trans  &trans             &trans                  &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp GRAVE              &kp SQT          &kp LESS_THAN  &trans
+&trans  &trans  &trans            &trans  &ht_b LCTRL TILDE  &ht_b LEFT_ALT MINUS    &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACE  &kp COLON      &kp NON_US_BACKSLASH
+&trans  &trans  &trans            &trans  &kp DOLLAR         &kp PERCENT             &kp GREATER_THAN  &kp AT_SIGN           &kp HASH               &kp PERIOD       &kp COMMA      &trans
+                                  &trans  &trans             &trans                  &trans            &trans                &trans
+            >;
+        };
+
+        lhs_special {
+            bindings = <
+&trans  &trans  &kp MINUS  &kp ASTERISK  &trans            &kp EQUAL        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &kp GREATER_THAN  &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans     &trans        &trans            &kp LESS_THAN    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans        &trans            &trans           &trans  &trans  &trans
             >;
         };
 
